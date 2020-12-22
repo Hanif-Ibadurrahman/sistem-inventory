@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">    
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+
+<!DOCTYPE html>
+<html lang="en">
+    
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/pnj.png">
+    <link rel="icon" type="image/png" href="../assets/img/pnj.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    <title>PEMINJAMAN</title>
+
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
+    <link rel="stylesheet" href="../../../use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+    <link href="http://127.0.0.1:8000/assets-sistem-inventory/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="http://127.0.0.1:8000/assets-sistem-inventory/css/now-ui-dashboard.min44ca.css?v=1.4.0" rel="stylesheet" />
+    
+    <link href="http://127.0.0.1:8000/assets-sistem-inventory/css/timepicker.css" rel="stylesheet" />
+
+</head>
+<body class="">   
+<div class="wrapper ">   
+    <div class="sidebar" data-color="orange">
+    <!--
+        Tip 1: You can change the color of the sidebar using: data-color="blue | green | orange | red | yellow"
+    -->
+
+    <div class="logo">
+        <a href="list-inventory.php" class="simple-text logo-mini">
+          P
+        </a>
+
+        <a href="list-peminjaman.php" class="simple-text logo-normal">
+          PEMINJAMAN
+        </a>
+        
+    </div>
+
+    <div class="sidebar-wrapper" id="sidebar-wrapper">
+        
+        <ul class="nav">
+                
+              <!-- Untuk role member -->
+                            
+              <!-- Untuk role admin -->
+                            <li class="">
+                  <a href="http://127.0.0.1:8000/dashboard">                    
+                        <i class="now-ui-icons media-2_sound-wave"></i>                      
+                      <p>Dashboard</p>
+                  </a>
+              </li>
+              
+              <li class="">
+                  <a href="http://127.0.0.1:8000/admin/information">                      
+                        <i class="now-ui-icons files_paper"></i>                      
+                      <p>Information</p>
+                  </a>
+              </li>
+              
+              <li class="">
+                  <a href="http://127.0.0.1:8000/admin/profile">                      
+                        <i class="now-ui-icons users_single-02"></i>                     
+                      <p>User Profile</p>
+                  </a>
+              </li>
+
+              <li class="">
+                  <a href="http://127.0.0.1:8000/admin/inventory">                      
+                        <i class="now-ui-icons ui-2_settings-90"></i>                     
+                      <p>Inventory</p>
+                  </a>
+              </li>
+
+              <li class="">
+                  <a href="http://127.0.0.1:8000/admin/setting">                     
+                        <i class="now-ui-icons loader_gear"></i>                      
+                      <p>Setting</p>
+                  </a>
+              </li>
+              
+              <li class="">
+                  <a href="http://127.0.0.1:8000/admin/history">                      
+                        <i class="now-ui-icons design_bullet-list-67"></i>                      
+                      <p>History</p>
+                  </a>
+              </li>
+                                  </ul>
+    </div>
+    </div>
+
+
+<div class="main-panel" id="main-panel">
+              <!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-transparent  bg-primary  navbar-absolute">
+	<div class="container-fluid">
+    <div class="navbar-wrapper">
+      
+			<div class="navbar-toggle">
+				<button type="button" class="navbar-toggler">
+					<span class="navbar-toggler-bar bar1"></span>
+					<span class="navbar-toggler-bar bar2"></span>
+					<span class="navbar-toggler-bar bar3"></span>
+				</button>
+			</div>
+      
+			<a class="navbar-brand" href="">List Inventory</a>
+		</div>
+
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-bar navbar-kebab"></span>
+			<span class="navbar-toggler-bar navbar-kebab"></span>
+			<span class="navbar-toggler-bar navbar-kebab"></span>
+		</button>
+
+	    <div class="collapse navbar-collapse justify-content-end" id="navigation">
+
+<ul class="navbar-nav">
+  <li class="nav-item">
+    <a class="nav-link" href="http://127.0.0.1:8000/admin/profile">
+      <i class="now-ui-icons users_single-02"></i>
+      <p>
+        <span class="d-lg-none d-md-block">Account</span>
+      </p>
+    </a>
+  </li>
+</ul>
+
+	    </div>
+	</div>
+</nav>
+<!-- End Navbar -->
+
+<div class="panel-header panel-header-sm">
+  
+</div>
+
+<div class="content">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+          <div class="card-header">
+            <h4 class="card-title">Information</h4>
+          </div>
+          <div class="card-body">
+                <div class="container">
+                  <div class="col-md-12">
+                      <div class="panel panel-primary">
+                          <div class="panel-heading"><h3>Riwayat Peminjaman</h3></div><br>
+                          <div class="panel-body">
+                       
+                          <div class="row">
+                              <div>
+                                <a href="http://127.0.0.1:8000/admin/peminjaman/export">EXCEL</a>
+                              </div>
+                            <div class="col-md-12">
+                                <div class="table-responsive">
+                                  <table class="table table-bordered">                                
+                                      <tr style="text-align: center;">
+                                        <th>NO</th>
+                                        <th>NO. PEMINJAMAN</th>
+                                        <th>PEMINJAM</th>
+                                        <th>LABEL LOKER</th>
+                                        <th>NAMA INVENTORY</th>
+                                        <th>JUMLAH</th>
+                                        <th>PEMILIK</th>
+                                        <th>DESKRIPSI</th>
+                                        <th>LOKASI</th>
+                                        <th>KETERANGAN</th>
+                                        <th>STATUS PEMINJAMAN</th>
+                                        <th>DIBOOKING</th>
+                                        <th>DIPINJAM</th>
+                                        <th>DIKEMBALIKAN</th>
+                                      </tr>
+                                    
+                                                                                                                <tr style="text-align: center;">
+                                        <td class="align-middle">1</td>
+                                        <td class="align-middle">16122020065628</td>
+                                        <td class="align-middle">member@gmail.com</td>
+                                        <td class="align-middle">1</td>
+                                        <td class="align-middle">Laptop</td>
+                                        <td class="align-middle">1</td>
+                                        <td class="align-middle">JTIK</td>
+                                        <td class="align-middle">Asus</td>
+                                        <td class="align-middle">AA201</td>
+                                        <td class="align-middle">Tidak Bawa Laptop</td>
+                                        <td class="align-middle">Booking</td>
+                                        <td class="align-middle">2020-12-16 06:56:28</td>
+                                        <td class="align-middle"></td>
+                                        <td class="align-middle"></td>
+                                      </tr>
+                                                                                                            </table>
+                                </div>
+                            </div>
+                        </div>
+
+                          </div>
+
+                      </div>
+                  </div>
+                </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="footer" >
+    <div class=" container-fluid ">
+        <nav>
+            <ul>
+                <li>
+                    <a href="dashboard.php">
+                      Home
+                    </a>
+                </li>
+                <li>
+                    <a href="http://www.pnj.ac.id">
+                      About Us
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="copyright" id="copyright">
+        </div>
+    </div>
+</footer>
+</div>         
+             </div>
+          
+        </div>
+        
+<div class="fixed-plugin">
+    <div class="dropdown show-dropdown">
+        <a href="#" data-toggle="dropdown">
+        <i class="fa fa-cog fa-2x"> </i>
+        </a>
+        <ul class="dropdown-menu">
+			<li class="header-title"> Sidebar Background</li>
+            <li class="adjustments-line">
+                <a href="javascript:void(0)" class="switch-trigger background-color">
+                    <div class="badge-colors text-center">
+						<span class="badge filter badge-yellow" data-color="yellow"></span>
+                        <span class="badge filter badge-blue" data-color="blue"></span>
+                        <span class="badge filter badge-green" data-color="green"></span>
+                        <span class="badge filter badge-orange active" data-color="orange"></span>
+                        <span class="badge filter badge-red" data-color="red"></span>
+                    </div>
+                    <div class="clearfix"></div>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>    
+
+<script src="http://127.0.0.1:8000/assets-sistem-inventory/js/core/jquery.min.js" ></script>
+<script src="http://127.0.0.1:8000/assets-sistem-inventory/js/core/popper.min.js" ></script>
+<script src="http://127.0.0.1:8000/assets-sistem-inventory/js/core/bootstrap.min.js" ></script>
+<script src="http://127.0.0.1:8000/assets-sistem-inventory/js/plugins/perfect-scrollbar.jquery.min.js" ></script>
+<script src="http://127.0.0.1:8000/assets-sistem-inventory/js/ie10-viewport-bug-workaround.js" ></script>
+
+<script async defer src="../../../buttons.github.io/buttons.js"></script>
+
+<script src="http://127.0.0.1:8000/assets-sistem-inventory/js/plugins/chartjs.min.js"></script>
+
+<script src="http://127.0.0.1:8000/assets-sistem-inventory/js/timepicker.js"></script>
+
+<script src="http://127.0.0.1:8000/assets-sistem-inventory/js/plugins/bootstrap-notify.js"></script>
+
+<script src="http://127.0.0.1:8000/assets-sistem-inventory/js/now-ui-dashboard.min44ca.js?v=1.4.0" type="text/javascript"></script>
+
+<script type="text/javascript">
+      $( document ).ready(function(){
+        $(".simpleExample").timepicker();
+      });
+</script>
+
+<script>
+  $(document).ready(function(){
+    $().ready(function(){
+        $sidebar = $('.sidebar');
+        $sidebar_img_container = $sidebar.find('.sidebar-background');
+
+        $full_page = $('.full-page');
+
+        $sidebar_responsive = $('body > .navbar-collapse');
+        sidebar_mini_active = true;
+
+        window_width = $(window).width();
+
+        fixed_plugin_open = $('.sidebar .sidebar-wrapper .nav li.active a p').html();
+
+        // if( window_width > 767 && fixed_plugin_open == 'Dashboard' ){
+        //     if($('.fixed-plugin .dropdown').hasClass('show-dropdown')){
+        //         $('.fixed-plugin .dropdown').addClass('show');
+        //     }
+        //
+        // }
+
+        $('.fixed-plugin a').click(function(event){
+          // Alex if we click on switch, stop propagation of the event, so the dropdown will not be hide, otherwise we set the  section active
+            if($(this).hasClass('switch-trigger')){
+                if(event.stopPropagation){
+                    event.stopPropagation();
+                }
+                else if(window.event){
+                   window.event.cancelBubble = true;
+                }
+            }
+        });
+
+        $('.fixed-plugin .background-color span').click(function(){
+            $(this).siblings().removeClass('active');
+            $(this).addClass('active');
+
+            var new_color = $(this).data('color');
+
+            if($sidebar.length != 0){
+                $sidebar.attr('data-color',new_color);
+            }
+
+            if($full_page.length != 0){
+                $full_page.attr('filter-color',new_color);
+            }
+
+            if($sidebar_responsive.length != 0){
+                $sidebar_responsive.attr('data-color',new_color);
+            }
+        });
+
+        $('.fixed-plugin .img-holder').click(function(){
+            $full_page_background = $('.full-page-background');
+
+            $(this).parent('li').siblings().removeClass('active');
+            $(this).parent('li').addClass('active');
+
+
+            var new_image = $(this).find("img").attr('src');
+
+            if( $sidebar_img_container.length !=0 && $('.switch-sidebar-image input:checked').length != 0 ){
+                $sidebar_img_container.fadeOut('fast', function(){
+                   $sidebar_img_container.css('background-image','url("' + new_image + '")');
+                   $sidebar_img_container.fadeIn('fast');
+                });
+            }
+
+            if($full_page_background.length != 0 && $('.switch-sidebar-image input:checked').length != 0 ) {
+                var new_image_full_page = $('.fixed-plugin li.active .img-holder').find('img').data('src');
+
+                $full_page_background.fadeOut('fast', function(){
+                   $full_page_background.css('background-image','url("' + new_image_full_page + '")');
+                   $full_page_background.fadeIn('fast');
+                });
+            }
+
+            if( $('.switch-sidebar-image input:checked').length == 0 ){
+                var new_image = $('.fixed-plugin li.active .img-holder').find("img").attr('src');
+                var new_image_full_page = $('.fixed-plugin li.active .img-holder').find('img').data('src');
+
+                $sidebar_img_container.css('background-image','url("' + new_image + '")');
+                $full_page_background.css('background-image','url("' + new_image_full_page + '")');
+            }
+
+            if($sidebar_responsive.length != 0){
+                $sidebar_responsive.css('background-image','url("' + new_image + '")');
+            }
+        });
+
+        $('.switch-sidebar-image input').on("switchChange.bootstrapSwitch", function(){
+            $full_page_background = $('.full-page-background');
+
+            $input = $(this);
+
+            if($input.is(':checked')){
+                if($sidebar_img_container.length != 0){
+                    $sidebar_img_container.fadeIn('fast');
+                    $sidebar.attr('data-image','#');
+                }
+
+                if($full_page_background.length != 0){
+                    $full_page_background.fadeIn('fast');
+                    $full_page.attr('data-image','#');
+                }
+
+                background_image = true;
+            } else {
+                if($sidebar_img_container.length != 0){
+                    $sidebar.removeAttr('data-image');
+                    $sidebar_img_container.fadeOut('fast');
+                }
+
+                if($full_page_background.length != 0){
+                    $full_page.removeAttr('data-image','#');
+                    $full_page_background.fadeOut('fast');
+                }
+
+                background_image = false;
+            }
+        });
+
+        $('.switch-sidebar-mini input').on("switchChange.bootstrapSwitch", function(){
+          var $btn = $(this);
+
+          if(sidebar_mini_active == true){
+              $('body').removeClass('sidebar-mini');
+              sidebar_mini_active = false;
+              nowuiDashboard.showSidebarMessage('Sidebar mini deactivated...');
+          }else{
+              $('body').addClass('sidebar-mini');
+              sidebar_mini_active = true;
+              nowuiDashboard.showSidebarMessage('Sidebar mini activated...');
+          }
+
+          // we simulate the window Resize so the charts will get updated in realtime.
+          var simulateWindowResize = setInterval(function(){
+              window.dispatchEvent(new Event('resize'));
+          },180);
+
+          // we stop the simulation of Window Resize after the animations are completed
+          setTimeout(function(){
+              clearInterval(simulateWindowResize);
+          },1000);
+        });
+    });
+  });
+</script>
+
+</body>
+</html>
